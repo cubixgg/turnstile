@@ -1,0 +1,43 @@
+meta:
+  locale: en_us
+  fallback: en_us
+  display_name: English
+
+messages:
+  gate:
+    denied:
+      prefix: "<prefix><error>You may not connect to that server.</error>"
+      permission: "<prefix><error>You do not have permission to join that server.</error>"
+
+  server:
+    unknown: "<prefix><error>Unknown server \"<server>\".</error>"
+    list: "<prefix><white>Available servers: </white><hl><servers></hl>"
+    list_empty: "<prefix><gray>No servers are currently available to you.</gray>"
+
+  permission:
+    set:
+      success: "<prefix><success>Task <hl><task></hl> now requires permission <hl><permission></hl>.</success>"
+    remove:
+      success: "<prefix><success>Removed the permission requirement for task <hl><task></hl>.</success>"
+      not_found: "<prefix><error>No permission requirement is set for task <hl><task></hl>.</error>"
+    list:
+      header: "<prefix><primary>--- Task permissions (page <page>) ---</primary>"
+      row: "<gray><task></gray><dark_gray> -> </dark_gray><hl><permission></hl>"
+      empty: "<prefix><gray>No task permissions are configured.</gray>"
+      page_footer: "<prefix><gray>Use page <page> for more.</gray>"
+
+  server_prefix:
+    set:
+      success: "<prefix><success>Server prefix set to \"<hl><prefix_value></hl>\".</success>"
+    show: "<prefix><info>Current server prefix: <hl><prefix_value></hl></info>"
+    show_unset: "<prefix><info>No server prefix is currently configured.</info>"
+
+  common:
+    no_permission: "<prefix><error>You do not have permission to do that.</error>"
+    db_error: "<prefix><error>The database is currently unavailable — this change was not applied.</error>"
+    usage: |-
+      <prefix><gray>/turnstile permission set <task> <permission>
+      /turnstile permission remove <task>
+      /turnstile permission list [page]
+      /turnstile server_prefix set <prefix>
+      /turnstile server_prefix show</gray>
